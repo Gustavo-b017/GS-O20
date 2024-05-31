@@ -5,7 +5,7 @@ import './Paginas/CssGeral/Style.css'
 function App() {
 
   return (
-    <div>
+    <div className='App'>
       <NavBar />
       <Outlet/>
     </div>

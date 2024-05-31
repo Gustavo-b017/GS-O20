@@ -1,0 +1,1 @@
+export const onda = <i class="bi bi-tsunami"></i>

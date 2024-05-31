@@ -1,3 +1,66 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.App {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  background: url("public/imgs/celphone-water.jpg") center center/cover;
+}
+
+.Menu a {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.Home h1 {
+  font-size: 2.5rem;
+  color: #3b1b26;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 600;
+}
+.Home .Chamada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.Home .Chamada h2 {
+  font-size: 1.6rem;
+  color: #3b1b26;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 600;
+  color: white;
+}
+.Home .Chamada p {
+  font-size: 1rem;
+  color: #3b1b26;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 300;
+  border: 1px solid white;
+  margin: 10px 0;
+}
+.Home .Entendimento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+.Home .Entendimento p {
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
