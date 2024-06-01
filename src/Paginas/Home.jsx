@@ -1,18 +1,18 @@
-import { HomeIcones } from "./Dados/dados";
+import { useEffect, useState } from "react"
+
 
 function Home() {
-  
 
-    // const [movies, setMovies] = useState([])
+    const [homeIcons, setHomeIcons] = useState([])
 
-    // useEffect(() => {
-    //     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&language=en-US`)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         setMovies(data.results)
-    //         console.log(data.results)
-    //     })
-    // }, [])
+    useEffect(() => {
+        fetch(`https://665b786f3e4ac90a04d74e7a.mockapi.io/Home`)
+        .then(response => response.json())
+        .then(data => {
+            setHomeIcons(data)
+            console.log(data)
+        })
+    }, [])
 
     return (
         <div className='Home'>
@@ -32,16 +32,16 @@ function Home() {
 
             <ul className="Entendimento">
 
-                {HomeIcones.map((icone) => ( 
+                {homeIcons && homeIcons.map((icone) => (
                     <li className="Icones" key={icone.id}>
+                        
                         <div className="iconesSVG">
                             <img src={icone.icon}  alt="" />
                         </div>
                         
                         <p>{icone.text}</p>
                     </li>
-                ))}
-
+                ) ) }
             </ul>
         </div>
     );

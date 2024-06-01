@@ -5,6 +5,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  border: 1px solid red;
 }
 
 .App {
@@ -174,13 +175,12 @@
   margin: 0 auto;
 }
 .Info .carousel .carousel-inner {
-  margin: 0 auto;
   max-width: 95vw;
+  margin: 0 auto;
 }
 .Info .carousel .carousel-inner img {
   width: 100%;
   height: auto;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -197,54 +197,64 @@
     display: none;
   }
   .Info .Oceano {
-    display: block;
     padding: 10px 0;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    display: block;
     background-color: #CDCBBA;
     justify-content: space-around;
     text-align: center;
     width: 100%;
   }
-  .Info .Oceano div {
+  .Info .Oceano .ControleOceano {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 8%;
+    margin: 0 auto;
+    min-width: 90%;
+    gap: 20px;
+  }
+  .Info .Oceano .ControleOceano .infoOceano {
     padding: 20px 0;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 500px;
   }
-  .Info .Oceano div h1 {
+  .Info .Oceano .ControleOceano .infoOceano h1 {
     font-size: 4.8rem;
     color: #003C56;
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 600;
   }
-  .Info .Oceano div p {
+  .Info .Oceano .ControleOceano .infoOceano p {
     font-size: 1rem;
     color: #003C56;
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 300;
   }
-  .Info .Oceano img {
-    width: 200px;
+  .Info .Oceano .ControleOceano img {
+    width: 150px;
     height: auto;
     border-radius: 100%;
-    display: none;
+    margin: 0 auto;
   }
   .Info .Importancia {
     display: block;
     position: relative;
-    background: url("../Dados/img/fundoImportancia.svg") no-repeat center center/cover;
+    background: url("src/Paginas/Info/Sections/Importancia/fundoImportancia.svg") no-repeat center center/cover;
   }
   .Info .Importancia h1 {
-    position: absolute;
-    top: -45px;
-    left: 50%;
     font-size: 3.8rem;
     color: white;
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 600;
+    position: absolute;
+    top: -45px;
+    left: 50%;
   }
   .Info .Importancia .dadosImpo {
     display: flex;
@@ -268,9 +278,9 @@
   .Info .Importancia .dadosImpo img {
     width: 100%;
     height: auto;
-    max-width: 200px;
     padding: 0;
     margin: 0 auto;
+    max-width: 200px;
   }
   .Info .Importancia .dadosImpo p {
     padding: 0;
@@ -278,4 +288,4 @@
     color: white;
     max-width: 700px;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=Style.css.map */

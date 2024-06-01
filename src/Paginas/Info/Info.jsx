@@ -3,6 +3,7 @@ import Oceano from './Sections/Oceano.jsx';
 import { dadosInfo } from './dados/dadosInfo.jsx'
 function Info() {
     return (  
+        
         <div className="Info">
             
             <div id="carouselExampleCaptions" className="carousel slide">
@@ -41,42 +42,6 @@ function Info() {
                 </button>
                 
             </div>
-
-            {/* <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-                
-                <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleRide" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-
-                <div className="carousel-inner">
-                    
-                    {dadosInfo.map((item) => ( 
-                        <div className="carousel-item active" key={item.id}>
-
-                            <img src={item.icon}  alt="" />
-                            
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5> {item.title} </h5>
-                                <p> {item.text} </p>
-                            </div>
-                        </div>
-                    ))}                    
-                    
-                </div>
-                
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
-            </div> */}
 
             <Oceano />
 

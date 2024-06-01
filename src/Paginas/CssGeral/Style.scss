@@ -8,7 +8,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    // border: 1px solid red
+    border: 1px solid red
 }
 
 // pagina Home: 
@@ -124,9 +124,6 @@
     
 }
 
-
-
-
 .Home {
 
     h1 {
@@ -184,12 +181,14 @@
         display: block;
         max-width: 100vw;
         margin: 0 auto;
-        .carousel-inner {          
-            margin: 0 auto;
+        
+        .carousel-inner {      
+
             max-width: 95vw;
+            margin: 0 auto;
+
             img {
                 @include mixins.box-config(100%);
-                margin: 0 auto;
                 @include mixins.flex-center();
             }
         }
@@ -211,45 +210,52 @@
         }
         
         .Oceano{
-            display: block;
             @include mixins.section(10px 0);
             @include mixins.flex-center();
+            display: block;
             background-color: variaveis.$bageClaro;
             justify-content: space-around;
             text-align: center;
             width: 100%;
     
-            div {
-                @include mixins.section(20px 0);
-                max-width: 600px;
-                
-                h1 {
-                    @include mixins.text(4.8rem, variaveis.$Banner, variaveis.$font-family, 600);
+            .ControleOceano {
+                @include mixins.flex-center();
+                @include mixins.section(30px 8% );
+                min-width: 90%;
+                gap: 20px;
+
+                .infoOceano {
+                    @include mixins.section(20px 0);
+                    max-width: 500px;
+                    
+                    h1 {
+                        @include mixins.text(4.8rem, variaveis.$Banner, variaveis.$font-family, 600);
+                    }
+                    
+                    p {
+                        @include mixins.text(1rem, variaveis.$Banner, variaveis.$font-family, 300);
+                    }
                 }
-                
-                p {
-                    @include mixins.text(1rem, variaveis.$Banner, variaveis.$font-family, 300);
+        
+                img {
+                    @include mixins.box-config(150px);
+                    border-radius: 100%;
+                    margin: 0 auto;
+                    
                 }
-            }
-    
-            img {
-                @include mixins.box-config(200px);
-                border-radius: 100%;
-                
-                display: none;
             }
         }
 
         .Importancia {
             display: block;
             position: relative;
-            background: url('../Dados/img/fundoImportancia.svg') no-repeat center center/cover;
+            background: url('src/Paginas/Info/Sections/Importancia/fundoImportancia.svg') no-repeat center center/cover;
     
             h1 {
+                @include mixins.text(3.8rem, white, variaveis.$font-family, 600);
                 position: absolute;
                 top: -45px;
                 left: 50%;
-                @include mixins.text(3.8rem, white, variaveis.$font-family, 600);
             }
     
             .dadosImpo {
@@ -268,14 +274,13 @@
     
                 img {
                     @include mixins.box-config(100% );
-                    max-width: 200px;
                     @include mixins.section();
+                    max-width: 200px;
                 }
     
                 p{
                     @include mixins.section();
                     color: white;
-                    // max-width: 50%;
                     max-width: 700px;
                 }
             }
