@@ -35,7 +35,7 @@ function Home() {
                 {HomeIcones.map((icone) => ( 
                     <li className="Icones" key={icone.id}>
                         <div className="iconesSVG">
-                            {icone.icon} 
+                            <img src={icone.icon}  alt="" />
                         </div>
                         
                         <p>{icone.text}</p>

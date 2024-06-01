@@ -1,12 +1,14 @@
 @use 'mixins';
 @use 'variaveis';
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    // border: 1px solid red
 }
 
 // pagina Home: 
@@ -21,11 +23,10 @@
     
     nav {
         
-        max-width: 1200px;
-        margin: 0 auto;
+        @include mixins.section(20px 0);
         
         a img {
-            @include mixins.box-config(150px);
+            @include mixins.box-config(100px);
         }
         
 
@@ -48,7 +49,11 @@
         }
     }
 
-
+    @media screen and (min-width: 768px) {
+        nav {
+            max-width: 75vw;
+        }
+    }
 }
 
 .Home {
@@ -89,7 +94,7 @@
             min-width: 100px;
             max-width: 250px;
             
-            .iconesSVG {
+            .iconesSVG img {
                 @include mixins.box-config(100px);
                 @include mixins.section(20px 0);
             }
@@ -102,7 +107,110 @@
     }
 }
 
+.Info {
 
+    @include mixins.section(20px 0);
+    
+    .carousel {
+        display: block;
+        max-width: 100vw;
+        margin: 0 auto;
+        .carousel-inner {          
+            margin: 0 auto;
+            max-width: 95vw;
+            img {
+                @include mixins.box-config(100%);
+                margin: 0 auto;
+                @include mixins.flex-center();
+            }
+        }
+    }
+
+    .Oceano {
+        display: none;
+    }
+    
+
+    .Importancia {
+        display: none;
+    }
+
+    @media screen and (min-width: 700px) {
+        
+        .carousel {
+            display: none;
+        }
+        
+        .Oceano{
+            display: block;
+            @include mixins.section(50px 0, 40px auto 0 auto);
+            @include mixins.flex-center();
+            background-color: variaveis.$bageClaro;
+            justify-content: space-around;
+            text-align: center;
+            width: 100%;
+    
+            div {
+                @include mixins.section(20px 0);
+                max-width: 600px;
+                
+                h1 {
+                    @include mixins.text(4.8rem, variaveis.$Banner, variaveis.$font-family, 600);
+                }
+                
+                p {
+                    @include mixins.text(1rem, variaveis.$Banner, variaveis.$font-family, 300);
+                }
+            }
+    
+            img {
+                @include mixins.box-config(200px);
+                border-radius: 100%;
+                
+                display: none;
+            }
+        }
+
+        .Importancia {
+            display: block;
+            position: relative;
+            background: url('../Dados/img/fundoImportancia.svg') no-repeat center center/cover;
+    
+            h1 {
+                position: absolute;
+                top: -45px;
+                left: 50%;
+                @include mixins.text(3.8rem, white, variaveis.$font-family, 600);
+            }
+    
+            .dadosImpo {
+                @include mixins.flex-center(column);
+                @include mixins.section(40px 0);
+    
+                div {
+                    @include mixins.flex-center();
+                }
+    
+                div:nth-child(2) {
+                    margin: 50px 0;
+                    flex-direction: row-reverse;
+                }
+    
+                img {
+                    @include mixins.box-config(100% );
+                    max-width: 200px;
+                    @include mixins.section();
+                }
+    
+                p{
+                    @include mixins.section();
+                    color: white;
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}
 
 
 
