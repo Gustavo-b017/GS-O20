@@ -56,6 +56,77 @@
     }
 }
 
+.footer {
+    padding: 2rem 0;
+    width: 100%;
+    background-color: #4f8be622;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .FooterUlIcone {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+    
+    .footerUlTexto {
+        @media screen and (max-width: 800px){
+            flex-direction: column;
+        }
+    }
+    
+    .footerLiTexto {
+        display: flex;
+        align-items: center;
+    
+        &:not(:last-child)::after {
+            content: "•";
+            margin: 0 0.3rem ;
+            color: #fff;
+        };
+    
+        @media screen and (max-width: 800px){
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        
+            &:not(:last-child)::after {
+                content: "";
+            };
+        }
+    }
+    
+    .footerAIcones {
+        font-size: 2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        
+        &:hover {
+          transform: translateY(-10px);
+        } 
+    }
+    
+    .footerATexto {
+        font-size: 1.5rem;
+        display: flex;
+        transition: 0.4s;
+        
+        &:hover {
+            color: #000 ;
+        }
+    }
+    
+}
+
+
+
+
 .Home {
 
     h1 {
@@ -108,8 +179,6 @@
 }
 
 .Info {
-
-    @include mixins.section(20px 0);
     
     .carousel {
         display: block;
@@ -143,7 +212,7 @@
         
         .Oceano{
             display: block;
-            @include mixins.section(50px 0, 40px auto 0 auto);
+            @include mixins.section(10px 0);
             @include mixins.flex-center();
             background-color: variaveis.$bageClaro;
             justify-content: space-around;
@@ -185,10 +254,11 @@
     
             .dadosImpo {
                 @include mixins.flex-center(column);
-                @include mixins.section(40px 0);
+                @include mixins.section(60px 20px);
     
                 div {
                     @include mixins.flex-center();
+                    gap: 30px;
                 }
     
                 div:nth-child(2) {
@@ -205,7 +275,8 @@
                 p{
                     @include mixins.section();
                     color: white;
-                    max-width: 50%;
+                    // max-width: 50%;
+                    max-width: 700px;
                 }
             }
         }
