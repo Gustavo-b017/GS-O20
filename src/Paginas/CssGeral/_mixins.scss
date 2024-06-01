@@ -10,6 +10,11 @@
     align-items: $align;
 }
 
+@mixin section($p: 0, $m: 0 auto) {
+    padding: $p;
+    margin: $m;
+}
+
 @mixin text($size: 1rem, $color: black, $font: 'Segoe UI' Verdana sans-serif, $fw: 300) {
     font-size: $size;
     color: $color;

@@ -17,43 +17,86 @@
 }
 
 .Menu  {
-
-    a {
-        @include mixins.text(1.5rem, white, variaveis.$font-family, 600);
+    
+    
+    nav {
         
+        max-width: 1200px;
+        margin: 0 auto;
+        
+        a img {
+            @include mixins.box-config(150px);
+        }
+        
+
+        button{
+            background-color: white;
+        }
+
+        .collapse {
+            flex-grow: 0 !important;
+        }
+
+        .container-fluid {
+            @include mixins.flex-center();
+            justify-content: space-between;
+        }
+    
+        .nav-link {
+            @include mixins.text(1.5rem, variaveis.$textoMenu, variaveis.$font-family, 500) ;   
+            
+        }
     }
+
+
 }
 
 .Home {
+
     h1 {
-        @include mixins.text(2.5rem, variaveis.$magenta-color, variaveis.$font-family, 600);
+        @include mixins.text(2.5rem, variaveis.$texto, variaveis.$font-family, 600);
+        @include mixins.section(20px 5px);
+        text-align: center;
+
     }
+
     .Chamada {
         @include mixins.flex-center(column);
+        @include mixins.section(100px 5px);
         text-align: center;
-        padding: 0 20px;
         
         h2{
-            @include mixins.text(1.6rem, variaveis.$magenta-color, variaveis.$font-family, 600);
-            color: white;
+            @include mixins.text(1.6rem, variaveis.$texto, variaveis.$font-family, 600);
         }
         
         p {
-            @include mixins.text(1rem, variaveis.$magenta-color, variaveis.$font-family, 300);
-            border: 1px solid white;
+            @include mixins.text(1rem, variaveis.$texto, variaveis.$font-family, 300);
             margin: 10px 0;
         }
     }
     
     .Entendimento {
         
-        @include mixins.flex-center(column);
+        @include mixins.flex-center();
+        @include mixins.section(20px 0);
         color: white;
+        flex-wrap: wrap;
         text-align: center;
-        padding: 0 20px;
+        max-width: 1000px;
         
-        p {
-            @include mixins.text(1.5rem, white, variaveis.$font-family, 300);
+        .Icones{
+            @include mixins.section(20px 0);
+            min-width: 100px;
+            max-width: 250px;
+            
+            .iconesSVG {
+                @include mixins.box-config(100px);
+                @include mixins.section(20px 0);
+            }
+    
+            p {
+                @include mixins.text(1.2rem, variaveis.$texto, variaveis.$font-family, 300);
+            }
         }
 
     }

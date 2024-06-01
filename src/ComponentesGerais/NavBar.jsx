@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-
-
+import logo from '../Paginas/Dados/img/logoImg.png';
 function NavBar() {
 
     return (
@@ -8,7 +7,9 @@ function NavBar() {
         <nav className="navbar navbar-expand-lg ">
             <div className="container-fluid">
                 
-                <Link to='/' className="navbar-brand" href="#">BlueVision</Link>
+                <Link to='/' className="navbar-brand" href="#">
+                    <img src={logo} alt="" />
+                </Link>
                 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>

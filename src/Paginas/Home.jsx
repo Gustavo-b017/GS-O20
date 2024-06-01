@@ -1,4 +1,5 @@
 import { HomeIcones } from "./Dados/dados";
+
 function Home() {
   
 
@@ -33,9 +34,10 @@ function Home() {
 
                 {HomeIcones.map((icone) => ( 
                     <li className="Icones" key={icone.id}>
-                        <div className="">
-                            {icone.icon}
+                        <div className="iconesSVG">
+                            {icone.icon} 
                         </div>
+                        
                         <p>{icone.text}</p>
                     </li>
                 ))}

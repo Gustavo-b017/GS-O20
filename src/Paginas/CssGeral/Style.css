@@ -10,57 +10,95 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: url("public/imgs/celphone-water.jpg") center center/cover;
+  background: url("public/img/backGround.svg") center center/cover;
 }
 
-.Menu a {
+.Menu nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Menu nav a img {
+  width: 150px;
+  height: auto;
+}
+.Menu nav button {
+  background-color: white;
+}
+.Menu nav .collapse {
+  flex-grow: 0 !important;
+}
+.Menu nav .container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.Menu nav .nav-link {
   font-size: 1.5rem;
-  color: white;
+  color: #0097B2;
   font-family: "Segoe UI", Verdana, sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .Home h1 {
   font-size: 2.5rem;
-  color: #3b1b26;
+  color: #A5E2E6;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 600;
+  padding: 20px 5px;
+  margin: 0 auto;
+  text-align: center;
 }
 .Home .Chamada {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px 5px;
+  margin: 0 auto;
   text-align: center;
-  padding: 0 20px;
 }
 .Home .Chamada h2 {
   font-size: 1.6rem;
-  color: #3b1b26;
+  color: #A5E2E6;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 600;
-  color: white;
 }
 .Home .Chamada p {
   font-size: 1rem;
-  color: #3b1b26;
+  color: #A5E2E6;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 300;
-  border: 1px solid white;
   margin: 10px 0;
 }
 .Home .Entendimento {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
+  margin: 0 auto;
   color: white;
+  flex-wrap: wrap;
   text-align: center;
-  padding: 0 20px;
+  max-width: 1000px;
 }
-.Home .Entendimento p {
-  font-size: 1.5rem;
-  color: white;
+.Home .Entendimento .Icones {
+  padding: 20px 0;
+  margin: 0 auto;
+  min-width: 100px;
+  max-width: 250px;
+}
+.Home .Entendimento .Icones .iconesSVG {
+  width: 100px;
+  height: auto;
+  padding: 20px 0;
+  margin: 0 auto;
+}
+.Home .Entendimento .Icones p {
+  font-size: 1.2rem;
+  color: #A5E2E6;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
