@@ -12,7 +12,7 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: url("../../../public/img/backGround.svg") center center/cover;
+  background: url("../../../public/img/backGround.svg") center center/cover no-repeat;
 }
 
 .Menu nav {
@@ -288,4 +288,4 @@
     color: white;
     max-width: 700px;
   }
-}/*# sourceMappingURL=Style.css.map */
+}/*# sourceMappingURL=style.css.map */
