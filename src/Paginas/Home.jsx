@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 
-
 function Home() {
 
     const [homeIcons, setHomeIcons] = useState([])
