@@ -12,7 +12,7 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: url("public/img/backGround.svg") center center/cover;
+  background: url("../../../public/img/backGround.svg") center center/cover;
 }
 
 .Menu nav {
