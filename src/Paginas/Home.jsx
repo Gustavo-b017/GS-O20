@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+
 function Home() {
 
     const [homeIcons, setHomeIcons] = useState([])
@@ -14,6 +15,7 @@ function Home() {
     }, [])
 
     return (
+        
         <div className='Home'>
             
             <h1>Preservando o futuro dos oceanos</h1>
