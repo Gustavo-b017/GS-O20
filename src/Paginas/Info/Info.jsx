@@ -1,5 +1,6 @@
 import Importancia from './Sections/Importancia.jsx';
 import Oceano from './Sections/Oceano.jsx';
+import Poluicao from './Sections/Poluicao.jsx';
 import { dadosInfo } from './dados/dadosInfo.jsx'
 function Info() {
     return (  
@@ -46,6 +47,8 @@ function Info() {
             <Oceano />
 
             <Importancia />
+
+            <Poluicao />
         </div>
     );
 }
