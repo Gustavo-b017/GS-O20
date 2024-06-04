@@ -14,7 +14,7 @@ function Importancia() {
     }, [])
 
     return (  
-        <div className="Importancia">
+        <section className="Importancia">
             
             <h1>Importancia</h1>
 
@@ -28,7 +28,7 @@ function Importancia() {
             </div>
 
             
-        </div>
+        </section>
     );
 }
 

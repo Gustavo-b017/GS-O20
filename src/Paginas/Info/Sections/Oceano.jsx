@@ -1,7 +1,7 @@
 import sea from './sea.svg'
 function Oceano() {
     return (  
-        <div className="Oceano">
+        <section className="Oceano">
             <div className='ControleOceano'>
                 <div className='infoOceano'>
                     <h1>Oceanos</h1>
@@ -10,7 +10,7 @@ function Oceano() {
 
                 <img src={sea} alt="Oceanos" />
             </div>
-        </div>
+        </section>
     );
 }
 
