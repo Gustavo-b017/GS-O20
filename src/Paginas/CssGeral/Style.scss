@@ -197,14 +197,17 @@
 
     .Oceano {
         display: none;
-    }
-    
+    }   
 
     .Importancia {
         display: none;
     }
 
     .Poluicao {
+        display: none;
+    }
+
+    .Videos {
         display: none;
     }
 
@@ -331,12 +334,12 @@
             .conteudo {
                 
                 @include mixins.section(100px 0);
-                width: 80%;
-                @include mixins.flex-center(row, center, center, 20px);
+                @include mixins.flex-center(row, center, center, 40px);
+                padding: 90px 50px;
+                max-width: 1500px;
 
-                .textosSolo, .textoImg {
-                    
-                    width: 100%;
+                .textosSolo {
+                    width: 50%;
 
                     p {
                     
@@ -347,12 +350,34 @@
                         text-align: left;
                     }
 
-                    #textoImgP {
-                        text-align: right;
-                    }
+                    
                     img {
                         @include mixins.section(20px 0);
                     }
+                }
+
+                .textoImg {
+
+                    width: 50%;
+
+                    p {
+                    
+                        @include mixins.flex-center();
+                        @include mixins.text(1.5rem, white, variaveis.$font-family, 300);
+                        margin-top: 10px;
+                        text-align: left;
+                    }
+
+                    
+                    img {
+                        @include mixins.section(20px 0);
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                    #textoImgP {
+                        text-align: right;
+                    }
+
                 }
             }
         }
@@ -360,39 +385,44 @@
         .Videos {
 
             @include mixins.flex-center();
+            gap: 20px;
             @include mixins.section(50px 0);
             background-color: variaveis.$bageClaro;
+            flex-wrap: wrap;
 
             .artigosVideos {
+                @include mixins.flex-center(column);
+                gap: 20px;
 
                 .Artigos {
                     @include mixins.flex-center();
                     gap: 20px;
-                    margin-bottom: 20px;
+                    // margin: 20px;
 
                     .divArtigos {
-                        @include mixins.box-config(50%);
+                        @include mixins.box-config(180px, 250px);
                         @include mixins.flex-center();
                         @include mixins.section(20px 10px);
                         background: variaveis.$Banner;
+                        border-radius: 20px;
                         text-align: center;
+                        
+                        img {
+                            @include mixins.box-config(150px);
+                        }
+
+                        p {
+                            margin: 10px 0;
+                            @include mixins.text(1.5rem, white, variaveis.$font-family, 300);
+                        }
                     }
                 }
 
                 .carousel {
                     display: block;
-                    max-width: 20vw;
-                    margin: 0 ;
-            
-                    .carousel-inner {      
-            
-                        // max-width: 25vw;
-            
-                        img {
-                            @include mixins.box-config(100%);
-                            @include mixins.flex-center();
-                        }
-                    }
+                    width: 360px;
+                    height: 250px;
+                    padding: 0px;
                 }
             }
 
@@ -401,35 +431,18 @@
                 @include mixins.flex-center(column, center, center, 20px);
                 gap: 20px;
 
-                iframe {
-                    @include mixins.box-config(100%);
-                    // width: 500px;
+                .video {
+                    width: 400px;
+                    height: 250px;
+                    iframe {
+                        @include mixins.box-config(100%, 100%);
+                        // width: 500px;
+                    }
                 }
             }
         }
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

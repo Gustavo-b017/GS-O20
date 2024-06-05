@@ -29,9 +29,15 @@ function Videos() {
 
             <div className="doubleVideos">
                 
-                <iframe src="https://www.youtube.com/embed/0nOtisVPlgw?si=FEDHWgcgz3JNaqYW" title="YouTube video player"></iframe>
+                <div className="video">
+                    <iframe src="https://www.youtube.com/embed/0nOtisVPlgw?si=FEDHWgcgz3JNaqYW" title="YouTube video player"></iframe>
+                </div>
+
+                <div className="video">
+                    <iframe  src="https://www.youtube.com/embed/Rvw-23abRmc?si=MyfJs4xhbrxdsZAA" title="YouTube video player"></iframe>
+                </div>
             
-                <iframe  src="https://www.youtube.com/embed/Rvw-23abRmc?si=MyfJs4xhbrxdsZAA" title="YouTube video player"></iframe>
+                
                 
             </div>
         </section>
