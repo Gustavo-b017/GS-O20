@@ -9,7 +9,7 @@
     text-decoration: none;
     list-style: none;
     color: white;
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 .App{
@@ -61,6 +61,7 @@
     background-color: variaveis.$Banner;
     justify-content: space-around;
     padding: 2rem 0;
+    flex-wrap: wrap;
 
     .FooterUlIcone {
         @include mixins.flex-center();
@@ -72,6 +73,7 @@
     .footerUImg {
         @include mixins.flex-center();
         gap: 20px;
+        flex-wrap: wrap;
 
         li{
             width: 150px;
@@ -402,4 +404,66 @@
     }
 }
 
+.Contato {
+    @include mixins.flex-center();
+    @include mixins.section(30px 5% );
+    background-color: variaveis.$bageClaro;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
 
+    h1 {
+        @include mixins.text(4rem, variaveis.$texto, variaveis.$font-family, 600);
+        width: 50%;
+        max-width: 700px;
+        min-width: 250px;
+    }
+
+    .form {
+        @include mixins.flex-center(column);
+        width: 50%;
+        gap: 15px;
+        max-width: 450px;
+        min-width: 250px;
+
+        div {
+            @include mixins.flex-center();
+            gap: 10px;
+            
+            ion-icon {
+                font-size: 1.8rem;
+            }
+
+            input {
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                color: variaveis.$bgMenu;
+            }
+        }
+        
+
+        button {
+            @include mixins.box-config(75%);
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: variaveis.$Banner;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: 700px) {
+        h1 {
+            width: 50%;
+            font-size: 7rem;
+        }
+
+        .form {
+            width: 100%;
+        }
+        
+    }
+}

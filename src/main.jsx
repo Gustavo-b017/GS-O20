@@ -9,6 +9,7 @@ import Contato from './Paginas/Contato/Contato.jsx'
 import Info from './Paginas/Info/Info.jsx'
 import NotFound from './Paginas/NotFound/NotFound.jsx'
 
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const router = createBrowserRouter([{
   path: '/',
@@ -24,6 +25,8 @@ const router = createBrowserRouter([{
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <GoogleOAuthProvider clientId="67608341999-88j8heqk1btvoutnevt2a3c8sb33s1hr.apps.googleusercontent.com">
+      <RouterProvider router={router}/>
+    </GoogleOAuthProvider>
   </React.StrictMode>,
 )
