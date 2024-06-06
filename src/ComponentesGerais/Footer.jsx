@@ -1,36 +1,18 @@
 import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
 import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
+import { footerIcons } from "./footer/dadosFooter.jsx";
+
+import fiap from '../../public/img/Fiap.jpeg';
+import o20 from '../../public/img/O20.jpeg';
 
 function Footer() {
-
-  const [icones, setIcones] = useState([])
-  const [links, setLinks] = useState([])
-
-      useEffect(() => {
-          fetch(`https://6650c6a420f4f4c4427613db.mockapi.io/footer/icones`)
-          .then(response => response.json())
-          .then(data => {
-            setIcones(data)
-            console.log(data)
-          })
-      }, [])
-  
-  
-      useEffect(() => {
-          fetch(`https://6650c6a420f4f4c4427613db.mockapi.io/footer/links`)
-          .then(response => response.json())
-          .then(data => {
-            setLinks(data)
-            console.log(data)
-          })
-      }, [])
 
   return (
     <footer className="footer">
       <ul className="FooterUlIcone">
-        {icones && icones.map((icone) => (
+        {footerIcons.map((icone) => (
           <li key={icone.id}>  
             <a className="footerAIcones" href="#">
               <ion-icon 
@@ -40,14 +22,14 @@ function Footer() {
         ) ) }
       </ul>
 
-      <ul className="footerUlTexto FooterUlIcone">
-        {links && links.map((link) => (
-          <li className="footerLiTexto" key={link.id}>
-            <Link className="footerATexto footerAIcones" to={link.link}>
-              {link.nome}
-            </Link>
+      <ul className="footerUImg ">
+          <li>
+            <img src={fiap} className="footerImg" />
           </li>
-        ))}
+
+          <li>
+            <img src={o20} className="footerImg" />
+          </li>
       </ul>
 
     </footer>
