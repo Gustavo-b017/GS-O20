@@ -14,7 +14,10 @@
 
 .App {
     @include mixins.box-config(100%);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    justify-content: space-between;
     background: variaveis.$backGround-img no-repeat;
 }
 
@@ -43,9 +46,11 @@
             justify-content: space-between;
         }
 
-        .nav-link {
-            @include mixins.text(1.5rem, white, variaveis.$font-family, 500);
-
+        .navbar-nav {
+            gap: 20px;
+            .nav-link {
+                @include mixins.text(2rem, white, variaveis.$font-family, 500);
+            }
         }
     }
 
@@ -513,6 +518,7 @@
     @include mixins.flex-center(column);
     background-color: variaveis.$bageClaro;
     text-align: center;
+    border-radius: 15px;
     min-height: 200px;
 
     .divContato {
@@ -559,9 +565,47 @@
 }
 
 .AMOC {
-    @include mixins.flex-center(column);
-
+    @include mixins.flex-center();
+    @include mixins.section(50px 5px, 20px auto);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
     img {
-        width: 80%;
+        width: 95%;
+        min-width: 200px;
+    }
+
+    .mensagem {
+        @include mixins.flex-center(column, center, center, 20px );
+        text-align: center;
+        max-width: 550px;
+        h2 {
+            @include mixins.text(3.2rem, white,  variaveis.$font-family, 700);
+        }
+
+        p {
+            @include mixins.text(1.5rem, rgb(204, 204, 204), variaveis.$font-family, 400);
+        }
+    }
+
+    @media screen and (min-width: 770px) {
+        img {
+            width: 40%;
+            min-width: 200px;
+        }
+
+        .mensagem {
+            @include mixins.flex-center(column, center, center, 20px );
+            text-align: center;
+            max-width: 700px;
+            h2 {
+                @include mixins.text(4.2rem, white,  variaveis.$font-family, 700);
+            }
+
+            p {
+                @include mixins.text(1.8rem, rgb(204, 204, 204), variaveis.$font-family, 400);
+            }
+        }
+        
     }
 }

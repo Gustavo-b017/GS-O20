@@ -1,10 +1,14 @@
-import contru from './contrucao.png'
+import contrucao from './contrucaoPagina.jpg'
 function AMOC() {
     return (  
         <div className='AMOC'>
-            <h1>em construção</h1>
 
-            <img src={contru} alt="" />
+            <img src={contrucao} alt="" />
+
+            <div className="mensagem">
+                <h2>Pagina em contrução</h2>
+                <p>Estamos trabalhando ativamente para trazer o melhor conteúdo para você.</p>
+            </div>
         </div>
     );
 }
