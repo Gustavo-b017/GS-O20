@@ -1,11 +1,10 @@
 import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
 import "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
 
-import { Link } from "react-router-dom";
 import { footerIcons } from "./footer/dadosFooter.jsx";
 
-import fiap from '../../public/img/Fiap.jpeg';
-import o20 from '../../public/img/O20.jpeg';
+import fiap from './footer/Fiap.png';
+import o20 from './footer/o20.png';
 
 function Footer() {
 

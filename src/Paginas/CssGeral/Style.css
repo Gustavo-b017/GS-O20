@@ -46,6 +46,12 @@
   .Menu nav {
     max-width: 75vw;
   }
+  .Menu .navbar-nav .nav-link {
+    font-size: 2rem;
+    color: #0097B2;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    font-weight: 500;
+  }
 }
 
 .footer {
@@ -90,11 +96,11 @@
 }
 
 .Home h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #A5E2E6;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 600;
-  padding: 20px 5px;
+  padding: 50px 5px;
   margin: 0 auto;
   text-align: center;
 }
@@ -152,6 +158,44 @@
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 300;
 }
+@media screen and (min-width: 768px) {
+  .Home h1 {
+    font-size: 4rem;
+    color: #A5E2E6;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    font-weight: 600;
+    padding: 150px 5px;
+    margin: 0 auto;
+  }
+  .Home .Chamada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 100px 5px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .Home .Chamada h2 {
+    font-size: 2.6rem;
+    color: #A5E2E6;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    font-weight: 600;
+  }
+  .Home .Chamada p {
+    font-size: 1.8rem;
+    color: #A5E2E6;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    font-weight: 300;
+  }
+  .Home .Entendimento .Icones p {
+    font-size: 1.5rem;
+    color: #A5E2E6;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    font-weight: 300;
+  }
+}
 
 .Info .carousel {
   display: block;
@@ -181,14 +225,84 @@
   display: none;
 }
 .Info .Videos {
-  display: none;
+  padding: 50px 0;
+  margin: 60px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  background-color: #CDCBBA;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.Info .Videos .artigosVideos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  gap: 20px;
+}
+.Info .Videos .artigosVideos .Artigos {
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.Info .Videos .artigosVideos .Artigos .divArtigos {
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 40%;
+  min-width: 180px;
+  background: #003C56;
+  border-radius: 20px;
+  text-align: center;
+}
+.Info .Videos .artigosVideos .Artigos .divArtigos img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.Info .Videos .artigosVideos .Artigos .divArtigos p {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 300;
+}
+.Info .Videos .artigosVideos .video iframe {
+  width: 100%;
+  height: 100%;
+}
+.Info .Videos .doubleVideos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  gap: 20px;
+}
+.Info .Videos .doubleVideos .video iframe {
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 700px) {
   .Info .carousel {
     display: none;
   }
   .Info .Oceano {
-    padding: 10px 0;
+    padding: 5rem 0;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -218,19 +332,19 @@
     max-width: 500px;
   }
   .Info .Oceano .ControleOceano .infoOceano h1 {
-    font-size: 4.8rem;
+    font-size: 5.6rem;
     color: #003C56;
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 600;
   }
   .Info .Oceano .ControleOceano .infoOceano p {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #003C56;
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 300;
   }
   .Info .Oceano .ControleOceano img {
-    width: 150px;
+    width: 21rem;
     height: auto;
     border-radius: 100%;
     margin: 0 auto;
@@ -284,9 +398,13 @@
     height: auto;
     padding: 0;
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 240px;
   }
   .Info .Importancia .dadosImpo p {
+    font-size: 1.2rem;
+    color: white;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    font-weight: 300;
     padding: 0;
     margin: 0 auto;
     color: white;
@@ -447,11 +565,13 @@
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 300;
   }
-  .Info .Videos .artigosVideos .carousel {
-    display: block;
-    width: 360px;
+  .Info .Videos .artigosVideos .video {
+    width: 400px;
     height: 250px;
-    padding: 0px;
+  }
+  .Info .Videos .artigosVideos .video iframe {
+    width: 100%;
+    height: 100%;
   }
   .Info .Videos .doubleVideos {
     display: flex;
@@ -481,13 +601,15 @@
   margin: 0 auto;
   background-color: #CDCBBA;
   justify-content: space-around;
+  min-height: 70vh;
   text-align: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  gap: 20px;
 }
 .Contato h1 {
   font-size: 4rem;
-  color: #A5E2E6;
+  color: #003C56;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 600;
   width: 50%;
@@ -502,21 +624,22 @@
   gap: 0;
   width: 50%;
   gap: 15px;
-  max-width: 450px;
+  max-width: 600px;
   min-width: 250px;
 }
-.Contato .form div {
+.Contato .form .iconDiv {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0;
-  gap: 10px;
+  width: 80%;
 }
-.Contato .form div ion-icon {
+.Contato .form .iconDiv ion-icon {
   font-size: 1.8rem;
 }
-.Contato .form div input {
+.Contato .form .iconDiv input {
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -532,7 +655,7 @@
   color: white;
   cursor: pointer;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
   .Contato h1 {
     width: 50%;
     font-size: 7rem;

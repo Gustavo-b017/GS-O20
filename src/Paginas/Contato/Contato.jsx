@@ -12,7 +12,7 @@ function Contato() {
 
                 {dadosContato.map(dado => (
 
-                    <div key={dado.id}>
+                    <div  className='iconDiv' key={dado.id}>
                     
                         <ion-icon name={dado.icon} />
                     

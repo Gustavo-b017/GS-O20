@@ -7,7 +7,7 @@ function Poluicao() {
             
             <div className='cabecalho'>
                 <div>
-                    <h1>poluicao</h1>
+                    <h1>poluição</h1>
                     <img src={pelicano} />
                 </div>
             </div>

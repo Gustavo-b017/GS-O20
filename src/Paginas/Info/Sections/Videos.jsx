@@ -1,7 +1,5 @@
 import mar from './Videos/mar.png';
 
-import Carrosel from "./Carosel";
-
 function Videos() {
     return (  
         <section className="Videos">
@@ -24,17 +22,20 @@ function Videos() {
                     </div>
                 </div>
 
-                <Carrosel  />
+                <div className="video">
+                    <iframe src="https://www.youtube.com/embed/3EVpe88gYdc?si=gN6MqErlwxsJTtLg" title="YouTube video player"></iframe>
+                </div>
+
             </div>
 
             <div className="doubleVideos">
                 
                 <div className="video">
-                    <iframe src="https://www.youtube.com/embed/0nOtisVPlgw?si=FEDHWgcgz3JNaqYW" title="YouTube video player"></iframe>
+                    <iframe src="https://www.youtube.com/embed/dLDR7u1kosc?si=ewa5X1pn0NO3JYZR" title="YouTube video player"></iframe>
                 </div>
 
                 <div className="video">
-                    <iframe  src="https://www.youtube.com/embed/Rvw-23abRmc?si=MyfJs4xhbrxdsZAA" title="YouTube video player"></iframe>
+                    <iframe  src="https://www.youtube.com/embed/SmfM_EZFn0M?si=Ia4UjNGnpczi81F2"  title="YouTube video player"></iframe>
                 </div>
             
                 
