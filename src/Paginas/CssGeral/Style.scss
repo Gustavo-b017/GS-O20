@@ -12,25 +12,25 @@
     // border: 1px solid red;
 }
 
-.App{
+.App {
     @include mixins.box-config(100%);
     min-height: 100vh;
-    background: variaveis.$backGround-img no-repeat ;
+    background: variaveis.$backGround-img no-repeat;
 }
 
-.Menu  {
-    
-    
+.Menu {
+
+
     nav {
-        
+
         @include mixins.section(20px 0);
-        
+
         a img {
             @include mixins.box-config(100px);
         }
-        
 
-        button{
+
+        button {
             background-color: white;
         }
 
@@ -42,10 +42,10 @@
             @include mixins.flex-center();
             justify-content: space-between;
         }
-    
+
         .nav-link {
-            @include mixins.text(1.5rem, variaveis.$textoMenu, variaveis.$font-family, 500) ;   
-            
+            @include mixins.text(1.5rem, variaveis.$textoMenu, variaveis.$font-family, 500);
+
         }
     }
 
@@ -57,8 +57,8 @@
         .navbar-nav {
 
             .nav-link {
-                @include mixins.text(2rem, variaveis.$textoMenu, variaveis.$font-family, 500) ;   
-                
+                @include mixins.text(2rem, variaveis.$textoMenu, variaveis.$font-family, 500);
+
             }
         }
     }
@@ -83,8 +83,9 @@
         gap: 20px;
         flex-wrap: wrap;
 
-        li{
+        li {
             width: 150px;
+
             img {
                 @include mixins.box-config(100%, 100%);
             }
@@ -105,36 +106,36 @@
         @include mixins.flex-center(column);
         @include mixins.section(100px 5px);
         text-align: center;
-        
-        h2{
+
+        h2 {
             @include mixins.text(1.6rem, variaveis.$texto, variaveis.$font-family, 600);
         }
-        
+
         p {
             @include mixins.text(1rem, variaveis.$texto, variaveis.$font-family, 300);
             margin: 10px 0;
         }
     }
-    
+
     .Entendimento {
-        
+
         @include mixins.flex-center();
         @include mixins.section(20px 0);
         color: white;
         flex-wrap: wrap;
         text-align: center;
         max-width: 1000px;
-        
-        .Icones{
+
+        .Icones {
             @include mixins.section(20px 0);
             min-width: 100px;
             max-width: 250px;
-            
+
             .iconesSVG img {
                 @include mixins.box-config(100px);
                 @include mixins.section(20px 0);
             }
-    
+
             p {
                 @include mixins.text(1.2rem, variaveis.$texto, variaveis.$font-family, 300);
             }
@@ -152,36 +153,36 @@
             @include mixins.flex-center(column);
             @include mixins.section(100px 5px);
             text-align: center;
-            
-            h2{
+
+            h2 {
                 @include mixins.text(2.6rem, variaveis.$texto, variaveis.$font-family, 600);
             }
-            
+
             p {
                 @include mixins.text(1.8rem, variaveis.$texto, variaveis.$font-family, 300);
             }
         }
 
-        .Entendimento {            
-            .Icones{
-                        
+        .Entendimento {
+            .Icones {
+
                 p {
                     @include mixins.text(1.5rem, variaveis.$texto, variaveis.$font-family, 300);
                 }
             }
-    
+
         }
     }
 }
 
 .Info {
-    
+
     .carousel {
         display: block;
         max-width: 100vw;
         margin: 0 auto;
 
-        .carousel-inner {      
+        .carousel-inner {
 
             max-width: 95vw;
             margin: 0 auto;
@@ -195,7 +196,7 @@
 
     .Oceano {
         display: none;
-    }   
+    }
 
     .Importancia {
         display: none;
@@ -205,7 +206,7 @@
         display: none;
     }
 
-    
+
     .Videos {
         @include mixins.section(50px 0, 60px 0 0);
         @include mixins.flex-center();
@@ -228,11 +229,11 @@
                     @include mixins.flex-center();
                     width: 40%;
                     min-width: 180px;
-                    
+
                     background: variaveis.$Banner;
                     border-radius: 20px;
                     text-align: center;
-                    
+
                     img {
                         @include mixins.box-config(100%);
                         border-radius: 10px;
@@ -254,8 +255,8 @@
 
         }
 
-        
-        .doubleVideos{
+
+        .doubleVideos {
             @include mixins.flex-center(column, center, center, 20px);
             gap: 20px;
 
@@ -269,12 +270,12 @@
     }
 
     @media screen and (min-width: 700px) {
-        
+
         .carousel {
             display: none;
         }
-        
-        .Oceano{
+
+        .Oceano {
             @include mixins.section(5rem 0);
             @include mixins.flex-center();
             display: block;
@@ -282,31 +283,31 @@
             justify-content: space-around;
             text-align: center;
             width: 100%;
-    
+
             .ControleOceano {
                 @include mixins.flex-center();
-                @include mixins.section(30px 8% );
+                @include mixins.section(30px 8%);
                 min-width: 90%;
                 gap: 20px;
 
                 .infoOceano {
                     @include mixins.section(20px 0);
                     max-width: 500px;
-                    
+
                     h1 {
                         @include mixins.text(5.6rem, variaveis.$Banner, variaveis.$font-family, 600);
                     }
-                    
+
                     p {
                         @include mixins.text(1.4rem, variaveis.$Banner, variaveis.$font-family, 300);
                     }
                 }
-        
+
                 img {
                     @include mixins.box-config(21rem);
                     border-radius: 100%;
                     margin: 0 auto;
-                    
+
                 }
             }
         }
@@ -315,7 +316,7 @@
             display: block;
             position: relative;
             background: url('src/Paginas/Info/Sections/Importancia/fundoImportancia.svg') no-repeat center center/cover;
-    
+
             h1 {
                 @include mixins.text(5rem, white, variaveis.$font-family, 600);
                 @include mixins.tituloIsometrico();
@@ -324,28 +325,28 @@
                     @include mixins.tituloIsometrico(-60px, 50%);
                 }
             }
-    
+
             .dadosImpo {
                 @include mixins.flex-center(column);
                 @include mixins.section(70px 25px 140px 25px, 0 0 0px 0);
-    
+
                 div {
                     @include mixins.flex-center();
                     gap: 30px;
                 }
-    
+
                 div:nth-child(2) {
                     margin: 50px 0;
                     flex-direction: row-reverse;
                 }
-    
+
                 img {
-                    @include mixins.box-config(100% );
+                    @include mixins.box-config(100%);
                     @include mixins.section();
                     max-width: 240px;
                 }
-    
-                p{
+
+                p {
                     @include mixins.text(1.2rem, white, variaveis.$font-family, 300);
                     @include mixins.section();
                     color: white;
@@ -379,18 +380,18 @@
                         @include mixins.tituloIsometrico(-30px, 0%);
                         @include mixins.text(5rem, white, variaveis.$font-family, 600);
                     }
-                    
+
                     img {
                         @include mixins.tituloIsometrico(-205px, 58%);
                         height: 300px;
                     }
                 }
-                
-    
+
+
             }
-            
+
             .conteudo {
-                
+
                 @include mixins.section(100px 0);
                 @include mixins.flex-center(row, center, center, 40px);
                 padding: 90px 50px;
@@ -400,7 +401,7 @@
                     width: 50%;
 
                     p {
-                    
+
                         @include mixins.flex-center();
                         @include mixins.text(1.5rem, white, variaveis.$font-family, 300);
                         // @include mixins.section(20px 0);
@@ -408,7 +409,7 @@
                         text-align: left;
                     }
 
-                    
+
                     img {
                         @include mixins.section(20px 0);
                     }
@@ -419,19 +420,20 @@
                     width: 50%;
 
                     p {
-                    
+
                         @include mixins.flex-center();
                         @include mixins.text(1.5rem, white, variaveis.$font-family, 300);
                         margin-top: 10px;
                         text-align: left;
                     }
 
-                    
+
                     img {
                         @include mixins.section(20px 0);
                         width: 100%;
                         max-width: 500px;
                     }
+
                     #textoImgP {
                         text-align: right;
                     }
@@ -447,16 +449,16 @@
             @include mixins.section(50px 0);
             background-color: variaveis.$bageClaro;
             flex-wrap: wrap;
-    
+
             .artigosVideos {
                 @include mixins.flex-center(column);
                 gap: 20px;
-    
+
                 .Artigos {
                     @include mixins.flex-center();
                     gap: 20px;
                     // margin: 20px;
-    
+
                     .divArtigos {
                         @include mixins.box-config(180px, 250px);
                         @include mixins.flex-center();
@@ -464,36 +466,38 @@
                         background: variaveis.$Banner;
                         border-radius: 20px;
                         text-align: center;
-                        
+
                         img {
                             @include mixins.box-config(150px);
                         }
-    
+
                         p {
                             margin: 10px 0;
                             @include mixins.text(1.5rem, white, variaveis.$font-family, 300);
                         }
                     }
                 }
-    
+
                 .video {
                     width: 400px;
                     height: 250px;
+
                     iframe {
                         @include mixins.box-config(100%, 100%);
                         // width: 500px;
                     }
                 }
-    
+
             }
 
-            .doubleVideos{
+            .doubleVideos {
                 @include mixins.flex-center(column, center, center, 20px);
                 gap: 20px;
-    
+
                 .video {
                     width: 400px;
                     height: 250px;
+
                     iframe {
                         @include mixins.box-config(100%, 100%);
                         // width: 500px;
@@ -506,17 +510,17 @@
 
 .Contato {
     @include mixins.flex-center();
-    @include mixins.section(30px 5% );
+    @include mixins.section(30px 5%);
     background-color: variaveis.$bageClaro;
     justify-content: space-around;
-    min-height: 70vh;
     text-align: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    min-height: 70vh;
     gap: 20px;
 
     h1 {
-        @include mixins.text(4rem, variaveis.$Banner , variaveis.$font-family, 600);
+        @include mixins.text(4.5rem, variaveis.$Banner , variaveis.$font-family, 600);
         width: 50%;
         max-width: 700px;
         min-width: 250px;
@@ -532,7 +536,7 @@
         .iconDiv {
             @include mixins.flex-center();
             width: 80%;
-            
+
             ion-icon {
                 font-size: 1.8rem;
             }
@@ -546,7 +550,7 @@
             }
 
         }
-        
+
 
         button {
             @include mixins.box-config(75%);
@@ -559,15 +563,10 @@
         }
     }
 
-    @media screen and (min-width: 768px) {
-        h1 {
-            width: 50%;
-            font-size: 7rem;
-        }
+    @media screen and (min-width: 700px) {
 
-        .form {
-            width: 100%;
+        h1 {
+            font-size: 9rem;
         }
-        
     }
 }

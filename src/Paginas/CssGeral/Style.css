@@ -601,14 +601,14 @@
   margin: 0 auto;
   background-color: #CDCBBA;
   justify-content: space-around;
-  min-height: 70vh;
   text-align: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  min-height: 70vh;
   gap: 20px;
 }
 .Contato h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: #003C56;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 600;
@@ -655,12 +655,8 @@
   color: white;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .Contato h1 {
-    width: 50%;
-    font-size: 7rem;
-  }
-  .Contato .form {
-    width: 100%;
+    font-size: 9rem;
   }
 }/*# sourceMappingURL=Style.css.map */
