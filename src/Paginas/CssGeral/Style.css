@@ -38,7 +38,7 @@
 }
 .Menu nav .nav-link {
   font-size: 1.5rem;
-  color: #0097B2;
+  color: white;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-weight: 500;
 }
@@ -47,8 +47,8 @@
     max-width: 75vw;
   }
   .Menu .navbar-nav .nav-link {
-    font-size: 2rem;
-    color: #0097B2;
+    font-size: 1.8rem;
+    color: white;
     font-family: "Segoe UI", Verdana, sans-serif;
     font-weight: 500;
   }
@@ -592,60 +592,45 @@
 }
 
 .Contato {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
   padding: 30px 5%;
   margin: 0 auto;
-  background-color: #CDCBBA;
-  justify-content: space-around;
-  text-align: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  min-height: 70vh;
-  gap: 20px;
-}
-.Contato h1 {
-  font-size: 4.5rem;
-  color: #003C56;
-  font-family: "Segoe UI", Verdana, sans-serif;
-  font-weight: 600;
-  width: 50%;
-  max-width: 700px;
-  min-width: 250px;
-}
-.Contato .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 50%;
-  gap: 15px;
-  max-width: 600px;
-  min-width: 250px;
+  background-color: #CDCBBA;
+  text-align: center;
+  min-height: 200px;
 }
-.Contato .form .iconDiv {
+.Contato .divContato {
+  width: 100%;
+  max-width: 500px;
+  min-width: 200px;
+}
+.Contato .divContato input {
+  padding: 10px;
+  margin: 10px 0;
+  max-width: 500px;
+}
+.Contato .divContato .Email {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 80%;
 }
-.Contato .form .iconDiv ion-icon {
-  font-size: 1.8rem;
-}
-.Contato .form .iconDiv input {
-  width: 100%;
+.Contato .divContato .Email input {
   padding: 10px;
-  border-radius: 10px;
-  border: none;
-  color: #014A66;
+  margin: 0px 0;
+  margin-bottom: 10px;
+  max-width: 500px;
 }
-.Contato .form button {
+.Contato .divContato .Email .iconeMail {
+  margin-bottom: 10px;
+  height: 46px;
+}
+.Contato button {
   width: 75%;
   height: auto;
   padding: 10px;
@@ -654,9 +639,20 @@
   background-color: #003C56;
   color: white;
   cursor: pointer;
+  max-width: 400px;
+  transition: 0.5s;
 }
-@media screen and (min-width: 700px) {
-  .Contato h1 {
-    font-size: 9rem;
-  }
+.Contato button:hover {
+  background-color: #0097B2;
+}
+
+.AMOC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.AMOC img {
+  width: 80%;
 }/*# sourceMappingURL=Style.css.map */

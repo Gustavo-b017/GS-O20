@@ -44,7 +44,7 @@
         }
 
         .nav-link {
-            @include mixins.text(1.5rem, variaveis.$textoMenu, variaveis.$font-family, 500);
+            @include mixins.text(1.5rem, white, variaveis.$font-family, 500);
 
         }
     }
@@ -57,7 +57,7 @@
         .navbar-nav {
 
             .nav-link {
-                @include mixins.text(2rem, variaveis.$textoMenu, variaveis.$font-family, 500);
+                @include mixins.text(1.8rem, white, variaveis.$font-family, 500);
 
             }
         }
@@ -509,64 +509,59 @@
 }
 
 .Contato {
-    @include mixins.flex-center();
     @include mixins.section(30px 5%);
+    @include mixins.flex-center(column);
     background-color: variaveis.$bageClaro;
-    justify-content: space-around;
     text-align: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    min-height: 70vh;
-    gap: 20px;
+    min-height: 200px;
 
-    h1 {
-        @include mixins.text(4.5rem, variaveis.$Banner , variaveis.$font-family, 600);
-        width: 50%;
-        max-width: 700px;
-        min-width: 250px;
-    }
+    .divContato {
+        width: 100%;
+        max-width: 500px;
+        min-width: 200px;
 
-    .form {
-        @include mixins.flex-center(column);
-        width: 50%;
-        gap: 15px;
-        max-width: 600px;
-        min-width: 250px;
+        input {
+            @include mixins.section(10px, 10px 0);
+            max-width: 500px;
+        }
 
-        .iconDiv {
+        .Email {
             @include mixins.flex-center();
-            width: 80%;
-
-            ion-icon {
-                font-size: 1.8rem;
-            }
 
             input {
-                width: 100%;
-                padding: 10px;
-                border-radius: 10px;
-                border: none;
-                color: variaveis.$bgMenu;
+                @include mixins.section(10px, 0px 0);
+                margin-bottom: 10px;
+                max-width: 500px;
             }
-
-        }
-
-
-        button {
-            @include mixins.box-config(75%);
-            padding: 10px;
-            border-radius: 10px;
-            border: none;
-            background-color: variaveis.$Banner;
-            color: white;
-            cursor: pointer;
+            .iconeMail {
+                margin-bottom: 10px;
+                height: 46px;
+            }
         }
     }
 
-    @media screen and (min-width: 700px) {
+    button {
+        @include mixins.box-config(75%);
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        background-color: variaveis.$Banner;
+        color: white;
+        cursor: pointer;
+        max-width: 400px;
+        transition: .5s;
 
-        h1 {
-            font-size: 9rem;
+        &:hover {
+            background-color: variaveis.$textoMenu;
         }
+    }
+
+}
+
+.AMOC {
+    @include mixins.flex-center(column);
+
+    img {
+        width: 80%;
     }
 }
